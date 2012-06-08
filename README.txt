@@ -1,2 +1,0 @@
-Vinaora Nice Slideshow
-======================
