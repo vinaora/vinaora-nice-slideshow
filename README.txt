@@ -1,3 +1,2 @@
-vinaora-nice-slideshow
-abc def
+Vinaora Nice Slideshow
 ======================
