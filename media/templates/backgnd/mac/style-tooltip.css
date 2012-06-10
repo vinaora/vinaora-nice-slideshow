@@ -1,0 +1,52 @@
+#wowslider-container$GallerySuffix$ .ws_bullets  a img{
+	text-indent:0;
+	display:block;
+	$TooltipPos$:20px;
+	left:-$ThumbWidthHalf$px;
+	visibility:hidden;
+	position:absolute;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    border: 4px solid #FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	max-width:none;
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a:hover img{
+	visibility:visible;
+}
+
+#wowslider-container$GallerySuffix$ .ws_bulframe div div{
+	height:$ThumbHeight$px;
+	overflow:visible;
+	position:relative;
+}
+#wowslider-container$GallerySuffix$ .ws_bulframe div {
+	left:0;
+	overflow:hidden;
+	position:relative;
+	width:$ThumbWidth$px;
+	background-color:#FFF;
+}
+#wowslider-container$GallerySuffix$  .ws_bullets .ws_bulframe{
+	display:none;
+	$TooltipPos$:18px;
+	overflow:visible;
+	position:absolute;
+	cursor:pointer;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    border: 4px solid #FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+}
+#wowslider-container$GallerySuffix$ .ws_bulframe span{
+	display:block;
+	position:absolute;
+	$TooltipPos$:-10px;
+	margin-left:-4px;
+	left:$ThumbWidthHalf$px;
+	background:url(./triangle.png);
+	width:15px;
+	height:6px;
+}

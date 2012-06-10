@@ -1,0 +1,19 @@
+#wowslider-container$GallerySuffix$ {
+	margin:15px auto 60px;
+}
+
+#wowslider-container$GallerySuffix$  .ws_shadow{
+	position:absolute;
+	z-index: -1;
+	left:-$frameL$%;
+	top:-$frameT$%;
+	width:$frameW$%;
+	height:$frameH$%;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='$ImgPath$/bg.png', sizingMethod='scale');
+}
+*|html #wowslider-container1 .ws_shadow{
+	background-image: url(./bg.png);
+	background-repeat: no-repeat;
+	background-size:100%;
+	filter:"";
+}

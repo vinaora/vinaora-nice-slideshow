@@ -1,0 +1,9 @@
+#wowslider-container$GallerySuffix$ ul{
+	animation: wsBasic $FullDur$s infinite;
+	-moz-animation: wsBasic $FullDur$s infinite;
+	-webkit-animation: wsBasic $FullDur$s infinite;
+}
+@keyframes wsBasic{$keyframes$}
+@-moz-keyframes wsBasic{$keyframes$}
+@-webkit-keyframes wsBasic{$keyframes$}
+

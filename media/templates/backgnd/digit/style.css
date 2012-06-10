@@ -1,0 +1,70 @@
+
+#wowslider-container$GallerySuffix$  .ws_bullets { 
+	padding: 10px; 
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a { 
+	font:bold 10px/22px Tahoma,sans-serif; 
+	color:#000;
+	text-align:center;
+	margin-left:4px;
+	width:22px;
+	height:22px;
+	background: url(./bullet.png) left top;
+	float: left; 
+	position:relative;
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a.ws_selbull, #wowslider-container$GallerySuffix$ .ws_bullets a:hover{
+	background-position: right top;
+	color:#D4D4D4;
+}
+#wowslider-container$GallerySuffix$ a.ws_next, #wowslider-container$GallerySuffix$ a.ws_prev {
+	position:absolute;
+	display:none;
+	top:50%;
+	margin-top:-33px;
+	z-index:60;
+	height: 66px;
+	width: 59px;
+	background-image: url(./arrows.png);
+}
+#wowslider-container$GallerySuffix$ a.ws_next{
+	background-position: 100% 0;
+	right:$backMarginsRight$px;
+}
+#wowslider-container$GallerySuffix$ a.ws_prev {
+	left:$backMarginsLeft$px;
+	background-position: 0 0; 
+}
+#wowslider-container$GallerySuffix$ a.ws_next:hover{
+	background-position: 100% 100%;
+}
+#wowslider-container$GallerySuffix$ a.ws_prev:hover {
+	background-position: 0 100%; 
+}
+* html #wowslider-container$GallerySuffix$ a.ws_next,* html #wowslider-container$GallerySuffix$ a.ws_prev{display:block}
+#wowslider-container$GallerySuffix$:hover a.ws_next, #wowslider-container$GallerySuffix$:hover a.ws_prev {display:block}
+#wowslider-container$GallerySuffix$ .ws-title{
+	position: absolute;
+	bottom:15%;
+	left: $backMarginsLeft$px;
+	margin-right:5px;
+	z-index: 50;
+	padding:12px;
+	color: #d4d4d4;
+	text-transform:uppercase;
+	background:#000;
+    font-family: Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	-moz-border-radius:0 10px 10px 0;
+	border-radius:0 10px 10px 0;
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+}
+#wowslider-container$GallerySuffix$ .ws-title div{
+	padding-top:5px;
+	font-size: 13px;
+	text-transform:none;
+}
+

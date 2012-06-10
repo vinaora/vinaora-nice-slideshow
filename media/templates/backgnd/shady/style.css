@@ -1,0 +1,67 @@
+#wowslider-container$GallerySuffix$  .ws_bullets { 
+	padding: 10px; 
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a { 
+	margin-left:4px;
+	width:22px;
+	height:20px;
+	background: url(./bullet.png) left top;
+	float: left; 
+	text-indent: -4000px; 
+	position:relative;
+	color:transparent;
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a.ws_selbull, #wowslider-container$GallerySuffix$ .ws_bullets a:hover{
+	background-position: 0 100%;
+}
+#wowslider-container$GallerySuffix$ a.ws_next, #wowslider-container$GallerySuffix$ a.ws_prev {
+	position:absolute;
+	display:none;
+	top:50%;
+	margin-top:-28px;
+	z-index:60;
+	height: 50px;
+	width: 51px;
+	background-image: url(./arrows.png);
+	/*max-height:20%;
+	max-width:12%;
+	background-size:200% 200%;*/
+
+}
+#wowslider-container$GallerySuffix$ a.ws_next{
+	background-position: 100% 0;
+	right:10px;
+}
+#wowslider-container$GallerySuffix$ a.ws_prev {
+	left:10px;
+	background-position: 0 0; 
+}
+#wowslider-container$GallerySuffix$ a.ws_next:hover{
+	background-position: 100% 100%;
+}
+#wowslider-container$GallerySuffix$ a.ws_prev:hover {
+	background-position: 0 100%; 
+}
+* html #wowslider-container$GallerySuffix$ a.ws_next,* html #wowslider-container$GallerySuffix$ a.ws_prev{display:block}
+#wowslider-container$GallerySuffix$:hover a.ws_next, #wowslider-container$GallerySuffix$:hover a.ws_prev {display:block}
+#wowslider-container$GallerySuffix$ .ws-title{
+	position: absolute;
+	bottom:15%;
+	left: 0;
+	margin-right:10px;
+	z-index: 50;
+	padding:12px;
+	color: #F9FBFB;
+	text-transform:uppercase;
+	background:#2a2a2a;
+    font-family: Franklin Gothic Medium,sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	opacity:0.8;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+}
+#wowslider-container$GallerySuffix$ .ws-title div{
+	padding-top:5px;
+	font-size: 13px;
+	text-transform:none;
+}

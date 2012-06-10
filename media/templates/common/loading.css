@@ -1,0 +1,12 @@
+#wowslider-container$GallerySuffix$  .ws_logo{
+	position: absolute;
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	z-index: 9;
+	background: url(./loading.gif) 50% 50% no-repeat;
+}
+#wowslider-container$GallerySuffix$ .ws_bulframe  img.loading{
+	margin:$loadingMargin$;
+}

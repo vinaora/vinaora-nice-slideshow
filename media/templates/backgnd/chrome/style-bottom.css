@@ -1,0 +1,12 @@
+/* bottom center */
+#wowslider-container$GallerySuffix$  .ws_bullets {
+	$TooltipPos$:$backMarginsBottom$px;
+	margin-bottom: -25px;
+	left:50%;
+}
+#wowslider-container$GallerySuffix$  .ws_bullets div{
+	left:-50%;
+}
+#wowslider-container$GallerySuffix$  .ws_bullets .ws_bulframe{
+	$TooltipPos$:29px;
+}

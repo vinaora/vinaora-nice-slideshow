@@ -1,0 +1,14 @@
+#wowslider-container$GallerySuffix$ .ws_shadow{
+	width:140%;
+	height:45%;
+	position: absolute;
+	left:-21.7%;
+	bottom:-30%;
+	z-index:-1;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader( src='$ImgPath$/shadow.png', sizingMethod='scale');		/*IE<8*/
+}
+*|html #wowslider-container1 .ws_shadow{
+	background: url(./shadow.png) left 100%;
+	background-size:100%;
+	filter:"";
+}

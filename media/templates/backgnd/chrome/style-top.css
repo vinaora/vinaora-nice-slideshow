@@ -1,0 +1,10 @@
+/* bottom center */
+#wowslider-container$GallerySuffix$  .ws_bullets {
+	top: $backMarginsTop$px;
+    right: $backMarginsRight$px;
+	margin-right: 7px;
+	margin-top: 7px;
+}
+#wowslider-container$GallerySuffix$  .ws_bullets .ws_bulframe{
+	top:20px;
+}

@@ -1,0 +1,68 @@
+
+#wowslider-container$GallerySuffix$  .ws_bullets { 
+	padding: 10px; 
+}
+#wowslider-container$GallerySuffix$ .ws_bullets a { 
+	margin-left: 5px; 
+	height: 10px; 
+	width: 10px; 
+	float: left; 
+	border: 1px solid #d6d6d6; 
+	color: #d6d6d6; 
+	text-indent: -4000px; 
+	background-image:url("data:image/gif;base64,");
+	position:relative;
+	color:transparent;
+}
+#wowslider-container$GallerySuffix$ .ws_selbull { 
+	background-color: #d6d6d6; 
+	color: #FFFFFF; 
+}
+
+#wowslider-container$GallerySuffix$ .ws_bullets a:hover, #wowslider-container$GallerySuffix$ .ws_overbull { 
+	background-color: #d6d6d6;
+	color: #FFFFFF; 
+}
+
+#wowslider-container$GallerySuffix$ a.ws_next, #wowslider-container$GallerySuffix$ a.ws_prev {
+	position:absolute;
+	display:block;
+	top:50%;
+	margin-top:-16px;
+	z-index:60;
+	height: 67px;
+	width: 32px;
+	background-image: url(./arrows.png);
+}
+#wowslider-container$GallerySuffix$ a.ws_next{
+	background-position: 0 0; 
+	right:-7px;
+}
+#wowslider-container$GallerySuffix$ a.ws_prev {
+	left:-7px;
+	background-position: 0 100%; 
+}
+#wowslider-container$GallerySuffix$ a.ws_next:hover{
+	background-position: 100% 0; 
+}
+#wowslider-container$GallerySuffix$ a.ws_prev:hover{
+	background-position: 100% 100%; 
+}
+#wowslider-container$GallerySuffix$ .ws-title{
+	position: absolute;
+	bottom:7%;
+	left: 0;
+	margin-right:5px;
+	z-index: 50;
+	background-color:#FFF;
+	color:#1E4553;
+	padding:10px;
+	font-family: Tahoma,Arial,Helvetica;
+	font-size: 14px;
+	opacity:0.7;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);	
+}
+#wowslider-container$GallerySuffix$ .ws-title div{
+	padding-top:5px;
+	font-size: 12px;
+}
