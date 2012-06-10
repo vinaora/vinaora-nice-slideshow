@@ -20,56 +20,47 @@ require_once dirname(__FILE__).DS.'helper.php';
 
 $module_id = $module->id;
 
+// Initialize some variables 
 $params->set('AppName', 'Vinaora Nice Slideshow');
 $params->set('AppVersion', '2.5.0');
 
-$params->set('GallerySuffix', $module->id);
-$params->set('Border', 'none');
+$params->set('GallerySuffix', $module_id);
 
-$params->set('noFrame', false);
+// Get the Config Path on the server
+$path	= JPath::clean( JPATH_BASE.'/media/mod_vt_nice_slideshow/config/'.$module_id );
+$params->set('configPath', $path);
 
-$params->set('module_code', $module->id);
-$params->set('configPath', JPATH_BASE.DS.'media'.DS.'mod_vt_nice_slideshow'.DS.'config'.DS.$module->id);
-
-$params->set('TooltipPos', 'top');
-$params->set('JSONList', 0);
-
-$base_url = rtrim(JURI::base(true),"/");
-$config_path =  $base_url."/media/mod_vt_nice_slideshow/config/".$params->get('module_code');
-$params->set('ImgPath', $config_path);
+// Get the Config URL of the module
+$base_url	= rtrim(JURI::base(true),'/');
+$path		= $base_url.'/media/mod_vt_nice_slideshow/config/'.$module_id;
+$params->set('ImgPath', $path);
 
 modVtNiceSlideshowHelper::validParams($params);
-
 modVtNiceSlideshowHelper::makeConfig($params);
-
-$slider = modVtNiceSlideshowHelper::getSlider($params);
-// $slider = array();
 
 $doc =& JFactory::getDocument();
 
-$doc->addStyleSheet( $base_url."/media/mod_vt_nice_slideshow/config/".$params->get('module_code')."/style.css" );
-
-$jqsource	= $params->get('jquery_source', 'local');
-$jqversion	= $params->get('jquery_version', 'latest');
+// Add Module CSS to <head> tag
+// JHtml::stylesheet( 'media/mod_vt_nice_slideshow/config/'.$module->id.'/style.css' );
+$doc->addStyleSheet( $params->get('ImgPath').'/style.css' );
 
 // Add jQuery library. Check jQuery loaded or not. See more details >> http://goo.gl/rK8Yr
 $app = JFactory::getApplication();
+$jqsource	= $params->get('jquery_source', 'local');
+$jqversion	= $params->get('jquery_version', 'latest');
 if($app->get('jquery') == false) {
 	modVtNiceSlideshowHelper::addjQuery($jqsource, $jqversion);
 	$app->set('jquery', true);
 }
 
-$doc->addScript( $base_url."/media/mod_vt_nice_slideshow/js/wowslider.js" );
+// Add Main script to <head> tag
+$doc->addScript( $base_url.'/media/mod_vt_nice_slideshow/js/wowslider.js' );
 
-$script = $base_url."/media/mod_vt_nice_slideshow/config/".$params->get('module_code')."/script.js";
-// $doc->addScript( $base_url."/media/mod_vt_nice_slideshow/config/".$params->get('module_code')."/script.js" );
+// Path to config script. It'll be inserted inline, not to <head> tag
+$script = $params->get('ImgPath').'/script.js';
+
+$slider = modVtNiceSlideshowHelper::getSlider($params);
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
-
-// $folders	= JFolder::folders(JPATH_BASE.DS.'media'.DS.'mod_vt_nice_slideshow', '.', true, true);
-// foreach($folders as $folder){
-	// JFile::copy(JPATH_BASE.DS.'media'.DS.'index.html', $folder.DS.'index.html');
-// } 
-
 
 require JModuleHelper::getLayoutPath('mod_vt_nice_slideshow', $params->get('layout', 'default'));

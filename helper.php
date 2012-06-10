@@ -20,11 +20,17 @@ class modVtNiceSlideshowHelper{
 	}
 	
 	function &validParams($params){
+
 		$params->set('backMarginsLeft', 0);
 		$params->set('backMarginsTop', 0);
 		$params->set('backMarginsRight', 0);
 		$params->set('backMarginsBottom', 0);
+
 		$params->set('Border', 'none');
+
+		$params->set('noFrame', 'true');
+		$params->set('TooltipPos', 'top');
+		$params->set('JSONList', 0);
 		
 		$params->set('ImageFillColor', '255,255,255');
 		
@@ -50,8 +56,7 @@ class modVtNiceSlideshowHelper{
 		$param	= $params->get('Captions');
 		if( $param == 'false' ) $params->set('item_description', '');
 		
-		$param	= self::getConfigFolder($params);
-		$params->set('configPath', $param);
+		self::createConfigFolder($params);
 		
 		self::cutomStyle($params);
 		
@@ -74,7 +79,8 @@ class modVtNiceSlideshowHelper{
 		self::_makeScript($params);
 
 		// Make file log
-		$str = mktime();
+		$str = mktime()."\n";
+		$str .= var_export($params, true);
 		JFile::write( $params->get('configPath').DS.$params->get('lastedit').'.log', $str);
 	}
 	
@@ -219,17 +225,19 @@ class modVtNiceSlideshowHelper{
 	/*
 	 * Create Config Directory
 	 */
-	function getConfigFolder($params){
-		$path	= JPath::clean( JPATH_BASE.'/media/mod_vt_nice_slideshow/config/'.$params->get('module_code') );
-		if (!is_dir($path)){
-			JFolder::create($path);
-			
-			// JFile::copy(JPATH_BASE.DS.'media'.DS.'index.html', $path.DS.'index.html');
-			$str = '<!DOCTYPE html><title></title>';
-			JFile::write($path.DS.'index.html', $str);
-		}
+	function createConfigFolder($params){
+		$path	= $params->get('configPath');
 		
-		return $path;
+		// If the folder is exist then do nothing
+		if ( is_dir($path) ) return false;
+
+		// If the folder is not exist then create it
+		JFolder::create($path);
+
+		$str = '<!DOCTYPE html><title></title>';
+		JFile::write($path.DS.'index.html', $str);
+
+		return true;
 	}
 	
 	/*
@@ -416,7 +424,7 @@ class modVtNiceSlideshowHelper{
 				break;
 
 			case 'crystal':
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>5, 'right'=>5, 'bottom'=>39, 'left'=>5);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -436,7 +444,7 @@ class modVtNiceSlideshowHelper{
 				break;
 				
 			case 'chrome':
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>25, 'right'=>25, 'bottom'=>26, 'left'=>25);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -454,7 +462,7 @@ class modVtNiceSlideshowHelper{
 				$param	= $params->get('PageBgColor', '#d7d7d7');
 				$params->set('PageBgColor', $param);
 				
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>14, 'right'=>15, 'bottom'=>60, 'left'=>15);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -488,7 +496,7 @@ class modVtNiceSlideshowHelper{
 				$param	= $params->get('PageBgColor', '#d7d7d7');
 				$params->set('PageBgColor', $param);
 				
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>9, 'right'=>10, 'bottom'=>17, 'left'=>10);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -505,7 +513,7 @@ class modVtNiceSlideshowHelper{
 				$param	= $params->get('PageBgColor', '#d7d7d7');
 				$params->set('PageBgColor', $param);
 				
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>11, 'right'=>11, 'bottom'=>11, 'left'=>11);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -524,7 +532,7 @@ class modVtNiceSlideshowHelper{
 			case 'noir':
 				$param	= $imageW + $params->get('backMarginsLeft') + $params->get('backMarginsRight');
 				$params->set('ContaienerW', $param);
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$param	= round( $params->get('ContaienerW')*0.031 );
 					$params->set('ShadowH', $param);
@@ -538,7 +546,7 @@ class modVtNiceSlideshowHelper{
 				$param	= $params->get('PageBgColor', '#d8d8d8');
 				$params->set('PageBgColor', $param);
 				
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>5, 'right'=>5, 'bottom'=>5, 'left'=>5);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -558,7 +566,7 @@ class modVtNiceSlideshowHelper{
 				$param	= $params->get('PageBgColor', '#d7d7d7');
 				$params->set('PageBgColor', $param);
 				
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>15, 'right'=>15, 'bottom'=>60, 'left'=>15);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -576,7 +584,7 @@ class modVtNiceSlideshowHelper{
 				
 				
 			case 'pulse':
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$border = array('top'=>15, 'right'=>15, 'bottom'=>15, 'left'=>15);
 					$ContaienerW = $imageW + $border["left"] + $border["right"];
@@ -594,7 +602,7 @@ class modVtNiceSlideshowHelper{
 				
 				$param	= $imageH + $params->get('backMarginsBottom');
 				$params->set('ContaienerH', $param);
-				if( !$params->get('noFrame') ){
+				if( $params->get('noFrame') == 'false' ){
 					// frame border+shadow
 					$param	= round( $params->get('ContaienerW')*1.4 );
 					$params->set('ShadowW', $param);
@@ -613,7 +621,7 @@ class modVtNiceSlideshowHelper{
 				
 				break;
 		}
-		if( $params->get('ShowTooltips') ){
+		if( $params->get('ShowTooltips') == 'true' ){
 			$param = $params->get('ThumbWidth');
 			$params->set('ThumbWidthHalf', round($param / 2));
 		}

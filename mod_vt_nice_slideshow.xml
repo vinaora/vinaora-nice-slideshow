@@ -13,6 +13,7 @@
 		<filename module="mod_vt_nice_slideshow">mod_vt_nice_slideshow.php</filename>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
+		<filename>README.markdown</filename>
 		<folder>fields</folder>
 		<folder>helper</folder>
 		<folder>tmpl</folder>
@@ -36,11 +37,11 @@
 				<field name="lastedit" type="lastedit" />
 				<field type="spacer" name="@spacer00" hr="true" />
 				<field name="theme" type="folderlist" default="default" directory="media/mod_vt_nice_slideshow/templates/backgnd" filter="" exclude="" stripext="" hide_none="1" hide_default="1" label="MOD_VT_NICE_SLIDESHOW_FIELD_THEME" description="MOD_VT_NICE_SLIDESHOW_FIELD_THEME_DESC" />
-				<field name="ImageWidth" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH_DESC" />
-				<field name="ImageHeight" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT_DESC" />
+				<field name="ImageWidth" type="text" default="640" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH_DESC" />
+				<field name="ImageHeight" type="text" default="480" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT_DESC" />
 				<field name="ImageEffect" type="folderlist" directory="media/mod_vt_nice_slideshow/templates/effects" filter="" exclude="" stripext="" hide_none="1" hide_default="1" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_EFFECT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_EFFECT_DESC" />
-				<field name="SlideshowDuration" type="text" default="500" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION_DESC"/>
-				<field name="SlideshowDelay" type="text" default="500" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY_DESC" />
+				<field name="SlideshowDuration" type="text" default="2000" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION_DESC"/>
+				<field name="SlideshowDelay" type="text" default="1000" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY_DESC" />
 				<field type="spacer" name="@spacer01" hr="true" />
 				<field name="item_dir" type="folderlist" directory="images" filter="" exclude="" hide_none="0" hide_default="1" label="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_DIR" description="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_DIR_DESC" />
 				<field name="item_path" type="textarea" rows="5" cols="30" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_PATH" description="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_PATH_DESC" />
@@ -82,8 +83,7 @@
 					<option value="true">JYES</option>
 					<option value="false">JNO</option>
 				</field>
-				
-				
+				<field type="spacer" name="@spacer03" hr="true" />
 				<field name="prevCaption" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION_DESC" />
 				<field name="nextCaption" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION_DESC" />
 			</fieldset>
@@ -97,6 +97,14 @@
 				<field name="cachemode" type="hidden" default="static">
 					<option value="static"></option>
 				</field>
+			</fieldset>
+			<fieldset name="extra">
+				<field name="jquery_source" type="list" default="local" label="MOD_VT_NICE_SLIDESHOW_FIELD_JQUERY_SOURCE" description="MOD_VT_NICE_SLIDESHOW_FIELD_JQUERY_SOURCE_DESC">
+					<option value="local">MOD_VT_NICE_SLIDESHOW_OPTION_JQUERY_SOURCE_LOCAL</option>
+					<option value="google">MOD_VT_NICE_SLIDESHOW_OPTION_JQUERY_SOURCE_GOOGLE</option>
+					<option value="none">JNONE</option>
+				</field>
+				<field name="jquery_version" type="folderlist" default="latest" directory="media/mod_vt_nice_slideshow/js/jquery/" filter="" exclude="" stripext="" hide_none="1" hide_default="1" label="MOD_VT_NICE_SLIDESHOW_FIELD_JQUERY_VERSION" description="MOD_VT_NICE_SLIDESHOW_FIELD_JQUERY_VERSION_DESC" />
 			</fieldset>
 		</fields>
 	</config>
