@@ -1,1 +1,23 @@
 Vinaora Nice Slideshow
+======================
+
+Overview
+--------
+Vinaora Nice Slideshow is a jQuery image slider with stunning visual effects (Blur, Flip, Blast, Fly, Blinds, Squares, Slices, Basic, Fade, Ken Burns, Stack, Stack vertical and Basic linear) and tons of professionally made templates. Vinaora Nice Slideshow is a module for Joomla to create fantastic sliders in a matter of seconds.
+
+Features
+--------
+* Awesome and unique transitions
+* Fancy templates
+* Fully responsive
+* jQuery powered
+* Graceful degradation to CSS-only slider
+* No Flash required
+* All browsers, all devices
+* Touch swipe support
+* Search engine friendly
+* Clean and valid markup
+* Descriptions
+* Prev/Next controls
+* Bullet navigation
+* Customizable speed, delay, size etc.

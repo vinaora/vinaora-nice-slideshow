@@ -18,7 +18,8 @@ defined('_JEXEC') or die;
 // Require the base helper class only once
 require_once dirname(__FILE__).DS.'helper.php';
 
-$module_id = $module->id;
+$module_id	= $module->id;
+$base_url	= rtrim(JURI::base(true),'/');
 
 // Initialize some variables 
 $params->set('AppName', 'Vinaora Nice Slideshow');
@@ -31,8 +32,7 @@ $path	= JPath::clean( JPATH_BASE.'/media/mod_vt_nice_slideshow/config/'.$module_
 $params->set('configPath', $path);
 
 // Get the Config URL of the module
-$base_url	= rtrim(JURI::base(true),'/');
-$path		= $base_url.'/media/mod_vt_nice_slideshow/config/'.$module_id;
+$path	= $base_url.'/media/mod_vt_nice_slideshow/config/'.$module_id;
 $params->set('ImgPath', $path);
 
 modVtNiceSlideshowHelper::validParams($params);
@@ -48,6 +48,7 @@ $doc->addStyleSheet( $params->get('ImgPath').'/style.css' );
 $app = JFactory::getApplication();
 $jqsource	= $params->get('jquery_source', 'local');
 $jqversion	= $params->get('jquery_version', 'latest');
+
 if($app->get('jquery') == false) {
 	modVtNiceSlideshowHelper::addjQuery($jqsource, $jqversion);
 	$app->set('jquery', true);

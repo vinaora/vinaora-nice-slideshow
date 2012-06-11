@@ -84,8 +84,8 @@
 					<option value="false">JNO</option>
 				</field>
 				<field type="spacer" name="@spacer03" hr="true" />
-				<field name="prevCaption" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION_DESC" />
-				<field name="nextCaption" type="text" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION_DESC" />
+				<field name="prevCaption" type="hidden" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_PREVCAPTION_DESC" />
+				<field name="nextCaption" type="hidden" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION" description="MOD_VT_NICE_SLIDESHOW_FIELD_NEXTCAPTION_DESC" />
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="moduleclass_sfx" type="text" size="40" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />

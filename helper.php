@@ -16,6 +16,7 @@
 defined('_JEXEC') or die;
 
 class modVtNiceSlideshowHelper{
+
 	function __construct(){
 	}
 	
