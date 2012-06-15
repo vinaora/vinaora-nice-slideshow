@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: helper.php 2012-06-12 vinaora $
+ * @version		$Id: helper.php 2012-06-17 vinaora $
  * @package		VINAORA NICE SLIDESHOW
  * @subpackage	mod_vt_nice_slideshow
  * @copyright	Copyright (C) 2012 VINAORA. All rights reserved.
@@ -20,7 +20,7 @@ class modVtNiceSlideshowHelper{
 	function __construct(){
 	}
 	
-	function &validParams($params){
+	public static function &validParams($params){
 
 		$params->set('backMarginsLeft', 0);
 		$params->set('backMarginsTop', 0);
@@ -57,14 +57,14 @@ class modVtNiceSlideshowHelper{
 		$param	= $params->get('Captions');
 		if( $param == 'false' ) $params->set('item_description', '');
 		
-		self::createConfigFolder($params);
+		self::_createConfigFolder($params);
 		
 		self::cutomStyle($params);
 		
 		return $params;
 	}
 
-	public function makeConfig($params){
+	public static function makeConfig($params){
 		if ( file_exists($params->get('configPath').DS.$params->get('lastedit').'.log') ) return;
 
 		// Remove old files
@@ -88,7 +88,7 @@ class modVtNiceSlideshowHelper{
 	/*
 	 * Copy images from 'Common' directory and 'Themes' directory
 	 */
-	private function _makeImages($params){
+	private static function _makeImages($params){
 	
 		// Check 'loading.gif' file exitst or not
 		if ( file_exists($params->get('configPath').DS.'loading.gif') ) return;
@@ -111,7 +111,7 @@ class modVtNiceSlideshowHelper{
 	/*
 	 * Join files common/common.css and backgnd/[theme]/style*.css
 	 */
-	private function _makeCSS($params){
+	private static function _makeCSS($params){
 		
 		// Check CSS File exitst or not
 		if ( file_exists($params->get('configPath').DS.'style.css') ) return;
@@ -179,7 +179,7 @@ class modVtNiceSlideshowHelper{
 	/*
 	 * Join Javascript files
 	 */
-	private function _makeScript($params){
+	private static function _makeScript($params){
 
 		// Check 'script.js' file exitst or not
 		if ( file_exists($params->get('configPath').DS.'script.js') ) return;
@@ -226,7 +226,7 @@ class modVtNiceSlideshowHelper{
 	/*
 	 * Create Config Directory
 	 */
-	function createConfigFolder($params){
+	private static function _createConfigFolder($params){
 		$path	= $params->get('configPath');
 		
 		// If the folder is exist then do nothing
@@ -283,7 +283,7 @@ class modVtNiceSlideshowHelper{
 		return '';
 	}
 
-	function getSlider($params, $separator = "\n"){
+	public static function getSlider($params, $separator = "\n"){
 		$slider = array('images'=>'', 'bullets'=>'');
 
 		$item_dir		= $params->get('item_dir');
@@ -400,7 +400,7 @@ class modVtNiceSlideshowHelper{
 		if (!is_file(JPATH_BASE.DS.$path)) return '';
 
 		// Convert it to url path
-		$path = JPath::clean(JURI::base(true)."/".$path, "/");
+		$path = JPath::clean(JURI::base(true).'/'.$path, '/');
 		
 		return $path;
 	}

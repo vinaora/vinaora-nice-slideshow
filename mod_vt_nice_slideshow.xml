@@ -40,8 +40,8 @@
 				<field name="ImageWidth" type="text" default="640" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH_DESC" />
 				<field name="ImageHeight" type="text" default="480" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT_DESC" />
 				<field name="ImageEffect" type="folderlist" directory="media/mod_vt_nice_slideshow/templates/effects" filter="" exclude="" stripext="" hide_none="1" hide_default="1" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_EFFECT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_EFFECT_DESC" />
-				<field name="SlideshowDuration" type="text" default="2000" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION_DESC"/>
-				<field name="SlideshowDelay" type="text" default="1000" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY_DESC" />
+				<field name="SlideshowDuration" type="text" default="900" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DURATION_DESC"/>
+				<field name="SlideshowDelay" type="text" default="2500" label="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY" description="MOD_VT_NICE_SLIDESHOW_FIELD_SLIDESHOW_DELAY_DESC" />
 				<field type="spacer" name="@spacer01" hr="true" />
 				<field name="item_dir" type="folderlist" directory="images" filter="" exclude="" hide_none="0" hide_default="1" label="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_DIR" description="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_DIR_DESC" />
 				<field name="item_path" type="textarea" rows="5" cols="30" default="" label="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_PATH" description="MOD_VT_NICE_SLIDESHOW_FIELD_ITEM_PATH_DESC" />

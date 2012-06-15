@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: default.php 2012-06-12 vinaora $
+ * @version		$Id: default.php 2012-06-17 vinaora $
  * @package		VINAORA NICE SLIDESHOW
  * @subpackage	mod_vt_nice_slideshow
  * @copyright	Copyright (C) 2012 VINAORA. All rights reserved.
