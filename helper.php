@@ -29,6 +29,7 @@ class modVtNiceSlideshowHelper{
 
 		$params->set('Border', 'none');
 
+		$params->set('ShowTooltips', 'false');
 		$params->set('noFrame', 'true');
 		$params->set('TooltipPos', 'top');
 		$params->set('JSONList', 0);

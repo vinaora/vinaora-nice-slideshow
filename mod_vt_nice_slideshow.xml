@@ -80,7 +80,7 @@
 					<option value="true">JYES</option>
 					<option value="false">JNO</option>
 				</field>
-				<field name="ShowTooltips" type="hidden" default="true" label="MOD_VT_NICE_SLIDESHOW_FIELD_SHOWTOOLTIPS" description="MOD_VT_NICE_SLIDESHOW_FIELD_SHOWTOOLTIPS_DESC">
+				<field name="ShowTooltips" type="hidden" default="false" label="MOD_VT_NICE_SLIDESHOW_FIELD_SHOWTOOLTIPS" description="MOD_VT_NICE_SLIDESHOW_FIELD_SHOWTOOLTIPS_DESC">
 					<option value="true">JYES</option>
 					<option value="false">JNO</option>
 				</field>
