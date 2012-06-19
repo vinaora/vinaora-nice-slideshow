@@ -36,8 +36,8 @@ Links
 Donate
 ------
 
-If you like [**Vinaora Nice Slideshow**](http://vinaora.com/vinaora-nice-slideshow/), you can support our work by donating online today.
+If you like [Vinaora Nice Slideshow](http://vinaora.com/vinaora-nice-slideshow/), you can support our work by donating today.
 
 * You can share this link http://vinaora.com/vinaora-nice-slideshow/ with your friends or others
-* Buy business hosting from [InmotionHosting]  (https://secure1.inmotionhosting.com/cgi-bin/gby/clickthru.cgi?id=vinaora&page=5) >> http://goo.gl/dfN4F: ver fast and reliability (recommended)
-* Buy personal hosting from [Hostgator](http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=vinaora) >> http://goo.gl/PoRVo: cheap and popular (coupon code: `H25PERCENT`)
+* Buy very fast and reliability business hosting from [InmotionHosting]  (https://secure1.inmotionhosting.com/cgi-bin/gby/clickthru.cgi?id=vinaora&page=5) >> http://goo.gl/dfN4F (recommended)
+* Buy cheap and popular personal hosting from [Hostgator](http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=vinaora) >> http://goo.gl/PoRVo (coupon code: `H25PERCENT`)
