@@ -35,7 +35,6 @@
 		<fields name="params" addfieldpath="modules/mod_vt_nice_slideshow/fields">
 			<fieldset name="basic">
 				<field name="lastedit" type="lastedit" />
-				<field type="spacer" name="@spacer00" hr="true" />
 				<field name="theme" type="folderlist" default="default" directory="media/mod_vt_nice_slideshow/templates/backgnd" filter="" exclude="" stripext="" hide_none="1" hide_default="1" label="MOD_VT_NICE_SLIDESHOW_FIELD_THEME" description="MOD_VT_NICE_SLIDESHOW_FIELD_THEME_DESC" />
 				<field name="ImageWidth" type="text" default="640" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_WIDTH_DESC" />
 				<field name="ImageHeight" type="text" default="480" label="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT" description="MOD_VT_NICE_SLIDESHOW_FIELD_IMAGE_HEIGHT_DESC" />

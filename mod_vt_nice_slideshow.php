@@ -60,8 +60,8 @@ $doc->addScript( $base_url.'/media/mod_vt_nice_slideshow/js/wowslider.js' );
 // Path to config script. It'll be inserted inline, not to <head> tag
 $script = $params->get('ImgPath').'/script.js';
 
-$slider = modVtNiceSlideshowHelper::getSlider($params);
-
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+
+$slider = modVtNiceSlideshowHelper::getSlider($params);
 
 require JModuleHelper::getLayoutPath('mod_vt_nice_slideshow', $params->get('layout', 'default'));
