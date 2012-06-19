@@ -10,7 +10,7 @@ Features
 
 * Awesome and unique transitions
 * Fancy templates
-* Fully responsive
+* Fully responsive (*)
 * jQuery powered
 * Graceful degradation to CSS-only slider
 * No Flash required
@@ -22,6 +22,8 @@ Features
 * Prev/Next controls
 * Bullet navigation
 * Customizable speed, delay, size etc.
+
+(*): This feature works with some limitations in IE6 and with Squares and Flip effects)
 
 Links
 -----
