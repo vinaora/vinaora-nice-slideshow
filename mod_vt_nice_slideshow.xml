@@ -21,6 +21,7 @@
 
 	<media folder="media" destination="mod_vt_nice_slideshow">
 		<filename>index.html</filename>
+		<filename>intro.html</filename>
 		<folder>config</folder>
 		<folder>css</folder>
 		<folder>js</folder>
