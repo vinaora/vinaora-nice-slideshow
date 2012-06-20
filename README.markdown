@@ -1,7 +1,7 @@
 Vinaora Nice Slideshow
 ======================
 
-[Vinaora Nice Slideshow](http://vinaora.com/vinaora-nice-slideshow/) is a jQuery image slider for Joomla with stunning visual effects (Blur, Flip, Blast, Fly, Blinds, Squares, Slices, Basic, Fade, Ken Burns, Stack, Stack vertical and Basic linear) and tons of professionally made themes. Vinaora Nice Slideshow use [WOWSlider](http://wowslider.com/) - a nice and lightweight slider to create fantastic sliders in a matter of seconds.
+[Vinaora Nice Slideshow](http://vinaora.com/vinaora-nice-slideshow/) is a jQuery image slider for Joomla with stunning visual effects (Blur, Flip, Blast, Fly, Blinds, Squares, Slices, Basic, Fade, Ken Burns, Stack, Stack vertical and Basic linear) and tons of professionally made themes. Vinaora Nice Slideshow use a nice and lightweight javascript slider to create fantastic sliders in a matter of seconds.
 
 Download: https://github.com/vinaora/vinaora-nice-slideshow/downloads
 
