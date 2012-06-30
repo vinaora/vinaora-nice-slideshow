@@ -48,6 +48,7 @@ $doc->addStyleSheet( $params->get('ImgPath').'/style.css' );
 $app = JFactory::getApplication();
 $jqsource	= $params->get('jquery_source', 'local');
 $jqversion	= $params->get('jquery_version', 'latest');
+$jqversion	= ($jqversion != 'latest') : $jqversion : '1.7.2';
 
 if($app->get('jquery') == false) {
 	modVtNiceSlideshowHelper::addjQuery($jqsource, $jqversion);
