@@ -41,18 +41,18 @@ class modVtNiceSlideshowHelper{
 		$param	= htmlspecialchars($params->get('nextCaption'), ENT_QUOTES);
 		$params->set('nextCaption', $param);
 		
-		$param	= intval($params->get('ImageWidth'));
+		$param	= (int) $params->get('ImageWidth');
 		$param	= (!$param) ? '640' : $param;
 		$params->set('ImageWidth', $param);
 
-		$param	= intval($params->get('ImageHeight'));
+		$param	= (int) $params->get('ImageHeight');
 		$param	= (!$param) ? '480' : $param;
 		$params->set('ImageHeight', $param);
 		
-		$param	= intval($params->get('SlideshowDuration', '500'));
+		$param	= (int) $params->get('SlideshowDuration', '500');
 		$params->set('SlideshowDuration', $param/100);
 		
-		$param	= intval($params->get('SlideshowDelay', '500'));
+		$param	= (int) $params->get('SlideshowDelay', '500');
 		$params->set('SlideshowDelay', $param/100);
 		
 		$param	= $params->get('Captions');
@@ -268,7 +268,7 @@ class modVtNiceSlideshowHelper{
 	 */
 	public static function getParam($param, $position=1, $separator='|'){
 
-		$position = intval($position);
+		$position = (int) $position;
 
 		// Not found the separator in string
 		if( strpos($param, $separator) === false ){
