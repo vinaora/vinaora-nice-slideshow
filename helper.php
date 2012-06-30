@@ -246,8 +246,10 @@ class modVtNiceSlideshowHelper{
 	 * Add jQuery Library to <head> tag
 	 */
 	public static function addjQuery($source='local', $version='latest'){
-		$source = strtolower(trim($source));
-		$version = trim($version);
+		$source		= strtolower(trim($source));
+		$version	= trim($version);
+		
+		$version	= ($version != 'latest') ? $version : '1.7.2';
 
 		switch($source){
 			case 'local':
