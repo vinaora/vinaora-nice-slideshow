@@ -81,7 +81,7 @@ class modVtNiceSlideshowHelper{
 		self::_makeScript($params);
 
 		// Make file log
-		$str = mktime()."\n";
+		$str = time()."\n";
 		$str .= var_export($params, true);
 		JFile::write( $params->get('configPath').DS.$params->get('lastedit').'.log', $str);
 	}
@@ -171,7 +171,7 @@ class modVtNiceSlideshowHelper{
 		
 		// Add Timestamp log
 		$css	.= "\n/* Vinaora Nice Slideshow >> http://vinaora.com/ */";
-		$css 	.= "\n/* ".mktime()." */";
+		$css 	.= "\n/* ".time()." */";
 
 		// Make file CSS
 		JFile::write( $params->get('configPath').DS.'style.css', $css);
@@ -218,7 +218,7 @@ class modVtNiceSlideshowHelper{
 		
 		// Add Timestamp log
 		$script	.= "\n/* Vinaora Nice Slideshow >> http://vinaora.com/ */";
-		$script .= "\n/* ".mktime()." */";
+		$script .= "\n/* ".time()." */";
 		
 		// Make file Javascript
 		JFile::write( $params->get('configPath').DS.'script.js', $script);
