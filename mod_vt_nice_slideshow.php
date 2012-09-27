@@ -16,7 +16,7 @@
 defined('_JEXEC') or die;
 
 // Require the base helper class only once
-require_once dirname(__FILE__).DS.'helper.php';
+require_once dirname(__FILE__).'/helper.php';
 
 $module_id	= $module->id;
 $base_url	= rtrim(JURI::base(true),'/');
